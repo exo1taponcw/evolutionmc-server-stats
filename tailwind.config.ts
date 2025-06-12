@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				gaming: {
+					green: '#10B981',
+					'green-dark': '#059669',
+					'green-light': '#34D399',
+					blue: '#3B82F6',
+					'blue-dark': '#1D4ED8',
+					'blue-light': '#60A5FA',
+					dark: '#0F172A',
+					'dark-light': '#1E293B'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +98,29 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-green': {
+					'0%, 100%': {
+						boxShadow: '0 0 0 0 rgba(16, 185, 129, 0.7)'
+					},
+					'70%': {
+						boxShadow: '0 0 0 10px rgba(16, 185, 129, 0)'
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						textShadow: '0 0 5px rgba(16, 185, 129, 0.5)'
+					},
+					'50%': {
+						textShadow: '0 0 20px rgba(16, 185, 129, 1), 0 0 30px rgba(16, 185, 129, 0.8)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-green': 'pulse-green 2s infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate'
 			}
 		}
 	},
