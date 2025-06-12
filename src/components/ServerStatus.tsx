@@ -33,8 +33,8 @@ const fetchServerStatus = async (): Promise<ServerData> => {
   } catch (error) {
     console.error('Error fetching server status:', error);
     toast({
-      title: "Connection Error",
-      description: "Unable to fetch server status. Showing demo data.",
+      title: "Eroare de Conexiune",
+      description: "Nu se poate prelua statusul serverului. Se afișează date demo.",
       variant: "destructive",
     });
     // Return demo data on error
@@ -43,7 +43,7 @@ const fetchServerStatus = async (): Promise<ServerData> => {
       players: { online: 42, max: 100 },
       version: "1.20.4",
       hostname: "EvolutionMC.ititan.org",
-      motd: { clean: ["Welcome to EvolutionMC", "The ultimate survival experience!"] }
+      motd: { clean: ["Bun venit pe EvolutionMC", "Cel mai bun server românesc!"] }
     };
   }
 };
@@ -65,7 +65,7 @@ export const ServerStatus = () => {
       <CardHeader>
         <CardTitle className="flex items-center space-x-2 text-gaming-green">
           <Server className="w-6 h-6" />
-          <span>Server Status</span>
+          <span>Status Server</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -81,7 +81,7 @@ export const ServerStatus = () => {
               variant={serverData?.online ? "default" : "destructive"}
               className={serverData?.online ? "bg-gaming-green text-gaming-dark" : ""}
             >
-              {isLoading ? "Checking..." : serverData?.online ? "Online" : "Offline"}
+              {isLoading ? "Se verifică..." : serverData?.online ? "Online" : "Offline"}
             </Badge>
           </div>
         </div>
@@ -91,7 +91,7 @@ export const ServerStatus = () => {
             <div className="flex items-center justify-between">
               <span className="text-slate-300 flex items-center space-x-2">
                 <Users className="w-4 h-4" />
-                <span>Players Online</span>
+                <span>Jucători Online</span>
               </span>
               <span className="text-2xl font-bold text-gaming-green minecraft-font">
                 {serverData.players.online}/{serverData.players.max}
@@ -102,7 +102,7 @@ export const ServerStatus = () => {
               className="h-3"
             />
             <p className="text-sm text-slate-400 text-center">
-              {Math.round(playerPercentage)}% capacity
+              {Math.round(playerPercentage)}% capacitate
             </p>
           </div>
         )}
@@ -111,7 +111,7 @@ export const ServerStatus = () => {
           <div className="flex items-center justify-between">
             <span className="text-slate-300 flex items-center space-x-2">
               <Monitor className="w-4 h-4" />
-              <span>Version</span>
+              <span>Versiune</span>
             </span>
             <Badge variant="outline" className="border-gaming-blue text-gaming-blue">
               {serverData.version}
@@ -119,18 +119,16 @@ export const ServerStatus = () => {
           </div>
         )}
 
-        {serverData?.hostname && (
-          <div className="bg-gaming-dark-light/50 p-4 rounded-lg border border-gaming-green/20">
-            <p className="text-sm text-slate-400 mb-1">Server Address</p>
-            <code className="text-gaming-green font-mono text-lg">
-              {serverData.hostname}
-            </code>
-          </div>
-        )}
+        <div className="bg-gaming-dark-light/50 p-4 rounded-lg border border-gaming-green/20">
+          <p className="text-sm text-slate-400 mb-1">Adresa Server</p>
+          <code className="text-gaming-green font-mono text-lg">
+            EvolutionMC.ititan.org
+          </code>
+        </div>
 
         {serverData?.motd?.clean && serverData.motd.clean.length > 0 && (
           <div className="bg-gaming-dark-light/50 p-4 rounded-lg border border-gaming-blue/20">
-            <p className="text-sm text-slate-400 mb-2">Message of the Day</p>
+            <p className="text-sm text-slate-400 mb-2">Mesajul Zilei</p>
             {serverData.motd.clean.map((line, index) => (
               <p key={index} className="text-slate-300">
                 {line}

@@ -3,17 +3,14 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "Discord", href: "#", color: "hover:text-[#5865F2]" },
-    { name: "Reddit", href: "#", color: "hover:text-[#FF4500]" },
-    { name: "Twitter", href: "#", color: "hover:text-[#1DA1F2]" },
-    { name: "YouTube", href: "#", color: "hover:text-[#FF0000]" },
+    { name: "Discord", href: "#", color: "hover:text-gaming-blue" },
+    { name: "YouTube", href: "#", color: "hover:text-red-500" },
   ];
 
   const quickLinks = [
-    { name: "Server Rules", href: "#rules" },
-    { name: "How to Join", href: "#join" },
-    { name: "Donations", href: "#donate" },
-    { name: "Staff Team", href: "#staff" },
+    { name: "Reguli Server", href: "/rules" },
+    { name: "Cum să te alături", href: "/join" },
+    { name: "Donații", href: "/donate" },
   ];
 
   return (
@@ -30,13 +27,13 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-              The ultimate Minecraft survival experience. Join our community and evolve your gameplay!
+              Experiența supremă de supravieţuire Minecraft în România. Alătură-te comunității noastre şi evoluează!
             </p>
           </div>
 
           <div>
             <h3 className="text-gaming-green font-semibold mb-4 minecraft-font">
-              Quick Links
+              Link-uri Rapide
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -54,9 +51,9 @@ export const Footer = () => {
 
           <div>
             <h3 className="text-gaming-green font-semibold mb-4 minecraft-font">
-              Connect With Us
+              Conectează-te cu noi
             </h3>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
@@ -67,8 +64,8 @@ export const Footer = () => {
                 </a>
               ))}
             </div>
-            <div className="mt-4 p-3 bg-gaming-dark-light/50 rounded-lg border border-gaming-green/20">
-              <p className="text-xs text-slate-400 mb-1">Server IP</p>
+            <div className="p-3 bg-gaming-dark-light/50 rounded-lg border border-gaming-green/20">
+              <p className="text-xs text-slate-400 mb-1">Adresa Server</p>
               <code className="text-gaming-green font-mono text-sm">
                 EvolutionMC.ititan.org
               </code>
@@ -78,7 +75,7 @@ export const Footer = () => {
 
         <div className="border-t border-gaming-green/20 mt-8 pt-6 text-center">
           <p className="text-slate-400 text-sm">
-            © {currentYear} EvolutionMC. All rights reserved. | Not affiliated with Mojang AB.
+            © {currentYear} EvolutionMC România. Toate drepturile rezervate. | Nu este afiliat cu Mojang AB.
           </p>
         </div>
       </div>

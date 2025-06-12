@@ -1,8 +1,6 @@
 
 import { Header } from "@/components/Header";
 import { ServerStatus } from "@/components/ServerStatus";
-import { PlayerList } from "@/components/PlayerList";
-import { NewsSection } from "@/components/NewsSection";
 import { Footer } from "@/components/Footer";
 import { ParticleBackground } from "@/components/ParticleBackground";
 
@@ -20,16 +18,15 @@ const Index = () => {
               EvolutionMC
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto">
-              Join our amazing Minecraft community and experience the ultimate survival adventure
+              Alătură-te comunității noastre româneşti de Minecraft şi trăieşte aventura de supravieţuire supremă
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <ServerStatus />
-            <PlayerList />
+          <div className="flex justify-center mb-12">
+            <div className="w-full max-w-md">
+              <ServerStatus />
+            </div>
           </div>
-
-          <NewsSection />
         </main>
 
         <Footer />
