@@ -16,7 +16,7 @@ const Join = () => {
     {
       icon: Monitor,
       title: "Versiunea Corectă",
-      description: "Serverul rulează pe versiunea 1.20.4. Setează clientul pe această versiune.",
+      description: "Serverul rulează pe versiunea Forge 1.20.1. Setează clientul pe această versiune.",
       color: "text-gaming-blue"
     },
     {
@@ -82,17 +82,17 @@ const Join = () => {
               <CardContent className="space-y-4">
                 <div>
                   <p className="text-sm text-slate-400 mb-1">Adresa Server</p>
-                  <code className="text-gaming-green font-mono text-lg bg-gaming-dark-light/50 px-3 py-2 rounded">
+                  <code className="text-gaming-green font-mono text-lg bg-slate-800/80 px-3 py-2 rounded">
                     EvolutionMC.ititan.org
                   </code>
                 </div>
                 <div>
                   <p className="text-sm text-slate-400 mb-1">Versiune</p>
-                  <span className="text-gaming-blue font-semibold">1.20.4</span>
+                  <span className="text-gaming-blue font-semibold">Forge 1.20.1</span>
                 </div>
                 <div>
                   <p className="text-sm text-slate-400 mb-1">Tip Server</p>
-                  <span className="text-slate-300">Survival, PvP, Română</span>
+                  <span className="text-slate-300">Survival, PvP, Română, Cracked</span>
                 </div>
               </CardContent>
             </Card>
@@ -106,15 +106,15 @@ const Join = () => {
               <CardContent className="space-y-3">
                 <div className="text-slate-300">
                   <p className="font-semibold text-gaming-green">Minecraft Java Edition</p>
-                  <p className="text-sm text-slate-400">Versiunea 1.20.4 sau compatibilă</p>
+                  <p className="text-sm text-slate-400">Versiunea Forge 1.20.1 sau compatibilă</p>
                 </div>
                 <div className="text-slate-300">
                   <p className="font-semibold text-gaming-blue">Conexiune Internet</p>
                   <p className="text-sm text-slate-400">Stabilă pentru cea mai bună experiență</p>
                 </div>
                 <div className="text-slate-300">
-                  <p className="font-semibold text-gaming-green">Account Minecraft</p>
-                  <p className="text-sm text-slate-400">Premium, autentic de la Mojang</p>
+                  <p className="font-semibold text-gaming-green">Server Cracked</p>
+                  <p className="text-sm text-slate-400">Nu necesită cont premium pentru a juca</p>
                 </div>
               </CardContent>
             </Card>
