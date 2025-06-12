@@ -8,8 +8,19 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { StatsSection } from "@/components/StatsSection";
 import { Button } from "@/components/ui/button";
 import { Pickaxe, Sword, Crown, Users } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
+
+  const copyServerIP = () => {
+    navigator.clipboard.writeText("EvolutionMC.ititan.org");
+    toast({
+      title: "IP copiat!",
+      description: "Adresa serverului a fost copiată în clipboard",
+    });
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <ParticleBackground />
@@ -24,14 +35,15 @@ const Index = () => {
               EvolutionMC
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-8">
-              Alătură-te comunității noastre româneşti de Minecraft şi trăieşte aventura de supravieţuire supremă
+              Alătură-te comunității noastre româneşti de Minecraft Earth şi trăieşte aventura de supravieţuire supremă pe o hartă 1:1000 a Pământului
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gaming-green hover:bg-gaming-green-dark text-gaming-dark font-bold">
+              <Button 
+                size="lg" 
+                className="bg-gaming-green hover:bg-gaming-green-dark text-gaming-dark font-bold"
+                onClick={copyServerIP}
+              >
                 Începe Aventura
-              </Button>
-              <Button size="lg" variant="outline" className="border-gaming-blue text-gaming-blue hover:bg-gaming-blue hover:text-white">
-                Vizionează Trailer
               </Button>
             </div>
           </div>

@@ -1,26 +1,8 @@
 
-import { Users, Calendar, Trophy, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 export const StatsSection = () => {
   const stats = [
-    {
-      icon: Users,
-      value: "2,500+",
-      label: "Jucători Înregistraţi",
-      color: "text-gaming-green"
-    },
-    {
-      icon: Calendar,
-      value: "365",
-      label: "Zile Online",
-      color: "text-gaming-blue"
-    },
-    {
-      icon: Trophy,
-      value: "50+",
-      label: "Evenimente Organizate",
-      color: "text-yellow-400"
-    },
     {
       icon: Heart,
       value: "99%",
@@ -40,7 +22,7 @@ export const StatsSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="flex justify-center">
         {stats.map((stat, index) => {
           const IconComponent = stat.icon;
           return (
